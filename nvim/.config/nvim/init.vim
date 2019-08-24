@@ -6,7 +6,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
 Plug 'nvie/vim-flake8'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
@@ -57,7 +57,7 @@ set wrap
 set textwidth=79
 set formatoptions=tcqrn1
 set noshiftround
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 "Fold settings
 set foldmethod=indent
@@ -69,3 +69,34 @@ set showmatch
 
 " Centered cursor
 let &scrolloff=999
+
+" Split Settings
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+set splitbelow
+set splitright
+
+" Run Settings
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+
+" Disable swap files
+    set noswapfile
+
+" Enable persistent Undo
+    set undofile
+
+" set the undo directory (You have to make this!)
+    set undodir=~/.vim/undodir
+
+" Detect Python Virtual Environments
+"python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
