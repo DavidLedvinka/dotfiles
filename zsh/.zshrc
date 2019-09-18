@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=/opt/anaconda/bin:$PATH
+export PATH=/opt/anaconda/bin:$PATH:~/.npm-global/bin 
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/dledvinka/.oh-my-zsh"
@@ -102,6 +102,12 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias vim="nvim"
+alias tb="taskbook"
+alias mutt="neomutt"
+alias R="R --quiet"
+
+# XTERM color support 
+export TERM=xterm-256color
 
 # Python Interpreter Configuration File
 export PYTHONSTARTUP=~/.pythonrc

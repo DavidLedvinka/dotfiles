@@ -10,6 +10,8 @@ Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 Plug 'nvie/vim-flake8'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
+Plug 'JuliaEditorSupport/julia-vim'
+Plug 'jpalardy/vim-slime'
 call plug#end()
 
 "" AESTHETICS
