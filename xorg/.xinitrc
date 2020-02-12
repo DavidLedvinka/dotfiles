@@ -50,4 +50,4 @@ fi
 
 hsetroot -solid "#3b4252" &
 compton &
-exec i3 
+exec i3

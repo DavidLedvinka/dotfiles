@@ -1,5 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=/opt/anaconda/bin:$PATH:~/.npm-global/bin 
+# Above makes anaconda default python, below makes pacman default python
+#export PATH=/usr/bin:$PATH:~/.npm-global/bin
+PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH
+alias pyconda='~/anaconda3/bin/python3'
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/dledvinka/.oh-my-zsh"

@@ -12,6 +12,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'jpalardy/vim-slime'
+Plug 'lervag/vimtex'
+Plug 'jalvesaq/Nvim-R'
+Plug 'chrisbra/csv.vim'
 call plug#end()
 
 "" AESTHETICS
@@ -55,9 +58,9 @@ set ignorecase
 set smartcase
 
 " Wrap and Whitespace Settings
-set wrap
+set wrap!
 set textwidth=79
-set formatoptions=tcqrn1
+set formatoptions=cqrn1
 set noshiftround
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
@@ -102,3 +105,15 @@ if 'VIRTUAL_ENV' in os.environ:
     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
     execfile(activate_this, dict(__file__=activate_this))
 EOF
+
+" Slime Settings
+let g:slime_target = "tmux"
+
+" Latex Settings
+let g:vimtex_view_method = 'zathura'
+
+" R Settings
+let R_assign = 0
+
+" Julia Settings
+let g:latex_to_unicode_auto = 1
